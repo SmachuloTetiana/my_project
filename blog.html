@@ -1,0 +1,198 @@
+<!DOCTYPE html> 
+<head>
+<meta charset="utf-8" />
+<title>Dishes</title>
+<link href="style.css" type="text/css" rel="stylesheet"/>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+
+	
+</head>
+<body>
+
+<header class="header">
+	<div class="content">
+		<div class="logo">
+			<img src="img/logo.png" alt="logo"/>
+			<a href="#">Dishes</a>	
+		</div>
+		<form action="#" method="post">
+			<fieldset>
+				<input type="text" name="search" maxlength="38" value="" placeholder="Пошук рецепту..."/>
+				<input type="submit" value=""/>
+			</fieldset>
+		</form>
+		
+		<nav>
+			<ul class="nav-main">
+				<li><a href="forum.html">Форум для спілкування</a></li>   
+				<li><a href="advice.html">Поради</a></li>      
+				<li class="active"><a href="blog.html">Каталог страв</a></li>   
+				<li><a href="index.html">Головна</a></li>    
+			</ul>
+		</nav>
+	</div><div class="clear"></div>
+</header>
+
+<div class="blog-photo"></div>
+
+<div class="content">
+	<div class="title">Каталог страв</div>
+	
+	<div class="blog-left">
+		<div class="blog-block">
+			<div class="blog-block-photo">
+				<img src="img/dessert_1.jpg" alt=""/>
+				<div class="blog-block-time">27/05/2016</div>
+				<div class="comment-views">
+					<span>150 Views</span>
+					<span>150 Comments</span>
+				</div>
+			</div>
+			<a href="#">Vivamus porta eros et neque vulputate pretium</a>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+			<button class="hvr-shadow">Читати далі...</button>	
+		</div>
+		
+		<div class="blog-block">
+			<div class="blog-block-photo">
+				<img src="img/dessert_2.jpg" alt=""/>
+				<div class="blog-block-time">27/05/2016</div>
+				<div class="comment-views">
+					<span>150 Views</span>
+					<span>150 Comments</span>
+				</div>
+			</div>
+			<a href="#">Vivamus porta eros et neque vulputate pretium</a>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+			<button class="hvr-shadow">Читати далі...</button>	
+		</div>
+		
+		<ul class="link-page">
+			<li><a href="#">&laquo;</a></li>
+			<li><a href="#" class="active-link">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">&raquo;</a></li>
+		</ul>
+	</div>
+	
+	<div class="blog-right">		
+		<div class="blog-reklama-block">
+			<h1>Title</h1>
+			<div class="blog-reklama-icon"><img src="img/icon4.jpg" alt=""/></div>
+			<p><a href="#">Recipe name</a> <span>15</span></p>
+			
+			<div class="blog-reklama-icon"><img src="img/icon1.jpg" alt=""/></div>
+			<p><a href="#">Recipe name</a> <span>20</span></p>
+						
+			<div class="blog-reklama-icon"><img src="img/icon4.jpg" alt=""/></div>
+			<p><a href="#">Recipe name</a> <span>25</span></p>
+		</div>
+		
+		<div class="blog-reklama-block">
+			<h1>Календар</h1>
+			<table id="calendar2">
+			  <thead>
+				<tr><td>‹<td colspan="5"><td>›
+				<tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+			  <tbody>
+			</table>
+		</div>
+		
+	</div>
+	
+	<div class="clear"></div>
+</div>
+
+
+<div class="footer">
+	<div class="content">
+		<div class="footer-logo">
+			<ul>
+				<li>Головна
+					<ul>
+						<li><a href="#">Lorem ipsum dolor</a></li>
+						<li><a href="#">Lorem ipsum dolor</a></li>
+					</ul>
+				</li>
+				<li>Категорії страв
+					<ul>
+						<li><a href="#">Lorem ipsum dolor</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+					</ul>
+				</li>
+				<li>Поради
+					<ul>
+						<li><a href="#">Lorem ipsum dolor</a></li>
+					</ul>
+				</li>
+				<li>Форум
+					<ul>
+						<li><a href="#">Lorem ipsum dolor</a></li>
+					</ul>
+				</li>
+			</ul>
+			<p>&copy; 2016 Kitchen by Smachulo T.I.</p>
+		</div>
+		<form action="#" method="post">
+			<fieldset>
+				<p>Contact us now!</p>
+				<input type="text" name="name" value="" placeholder="Імя"/>
+				<input type="text" name="email" value="" placeholder="E-mail"/>
+				<textarea rows="" cols="" name="comment" placeholder="Запитання"></textarea>
+				<input type="submit" value="Відправити"/>
+			</fieldset>
+		</form>
+	</div><div class="clear"></div>
+</div>
+
+
+<script>
+	function Calendar2(id, year, month) {
+	var Dlast = new Date(year,month+1,0).getDate(),
+		D = new Date(year,month,Dlast),
+		DNlast = new Date(D.getFullYear(),D.getMonth(),Dlast).getDay(),
+		DNfirst = new Date(D.getFullYear(),D.getMonth(),1).getDay(),
+		calendar = '<tr>',
+		month=["Січень","Лютий","Березень","Квітень","Травень","Червень","Липень","Серпень","Вересень","Жовтень","Листопад","Грудень"];
+	if (DNfirst != 0) {
+	  for(var  i = 1; i < DNfirst; i++) calendar += '<td>';
+	}else{
+	  for(var  i = 0; i < 6; i++) calendar += '<td>';
+	}
+	for(var  i = 1; i <= Dlast; i++) {
+	  if (i == new Date().getDate() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
+		calendar += '<td class="today">' + i;
+	  }else{
+		calendar += '<td>' + i;
+	  }
+	  if (new Date(D.getFullYear(),D.getMonth(),i).getDay() == 0) {
+		calendar += '<tr>';
+	  }
+	}
+	for(var  i = DNlast; i < 7; i++) calendar += '<td>&nbsp;';
+	document.querySelector('#'+id+' tbody').innerHTML = calendar;
+	document.querySelector('#'+id+' thead td:nth-child(2)').innerHTML = month[D.getMonth()] +' '+ D.getFullYear();
+	document.querySelector('#'+id+' thead td:nth-child(2)').dataset.month = D.getMonth();
+	document.querySelector('#'+id+' thead td:nth-child(2)').dataset.year = D.getFullYear();
+	if (document.querySelectorAll('#'+id+' tbody tr').length < 6) {  // чтобы при перелистывании месяцев не "подпрыгивала" вся страница, добавляется ряд пустых клеток. Итог: всегда 6 строк для цифр
+		document.querySelector('#'+id+' tbody').innerHTML += '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
+	}
+	}
+	Calendar2("calendar2", new Date().getFullYear(), new Date().getMonth());
+	// переключатель минус месяц
+	document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(1)').onclick = function() {
+	  Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)-1);
+	}
+	// переключатель плюс месяц
+	document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(3)').onclick = function() {
+	  Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)+1);
+	}
+</script>
+
+</body>
+</html>
+

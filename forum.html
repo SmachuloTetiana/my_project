@@ -1,0 +1,154 @@
+<!DOCTYPE html> 
+<head>
+<meta charset="utf-8" />
+<title>Dishes</title>
+<link href="style.css" type="text/css" rel="stylesheet"/>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+
+	
+</head>
+<body>
+
+<header class="header">
+	<div class="content">
+		<div class="logo">
+			<img src="img/logo.png" alt="logo"/>
+			<a href="#">Dishes</a>	
+		</div>
+		<form action="#" method="post">
+			<fieldset>
+				<input type="text" name="search" maxlength="38" value="" placeholder="Пошук рецепту..."/>
+				<input type="submit" value=""/>
+			</fieldset>
+		</form>
+		
+		<nav>
+			<ul class="nav-main">
+				<li class="active"><a href="forum.html">Форум для спілкування</a></li>   
+				<li><a href="advice.html">Поради</a></li>      
+				<li><a href="blog.html">Каталог страв</a></li>   
+				<li><a href="index.html">Головна</a></li>    
+			</ul>
+		</nav>
+	</div><div class="clear"></div>
+</header>
+
+<div class="blog-photo"></div>
+
+<div class="content">
+	<div class="title">Форум для спілкування <button class="add-comment hvr-shadow">Залишити коментар</button></div>
+	
+	<div class="add_comment">
+		<form action="admin/insert.php?pr=insert_tovar" method="post" enctype='multipart/form-data'>
+			<fieldset>
+				<input type="text" name="name" value="" placeholder="Ваше ім'я"/>
+				<textarea name="info" rows="" cols="" placeholder="Ваш коментар"></textarea>
+				<input type="submit" class="hvr-shadow" value="Додати коментар"/>
+			</fieldset>
+		</form><div class="clear"></div>
+	</div>
+	
+	<div class="advice-page">
+		<div class="dishes-block">
+			<div class="person-photo"><img src="img/photo_2.jpg" alt=""/></div>
+			<div class="person-info">
+				<p>Смачило Тетяна</p>
+				<b>06/06/2016</b>	
+				<div class="like-input">5</div>			
+				<div class="dishes-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+			</div>
+		</div>
+		<div class="dishes-block">
+			<div class="person-photo"><img src="img/photo_1.jpg" alt=""/></div>
+			<div class="person-info">
+				<p>Приходько Ростислав</p>
+				<b>01/06/2016</b>	
+				<div class="like-input">0</div>		
+				<div class="dishes-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+			</div>
+		</div>
+		<div class="dishes-block">
+			<div class="person-photo"><img src="img/photo_3.jpg" alt=""/></div>
+			<div class="person-info">
+				<p>Барилко Соломія</p>
+				<b>25/05/2016</b>	
+				<div class="like-input">0</div>		
+				<div class="dishes-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+			</div>
+		</div>
+		
+		<script>
+					$(document).ready(function() {
+						$(".like-input").on("click", function(){
+							var newCount = parseInt($(this).text(), 10) + 1; 
+							$(this).text(newCount); 
+						});
+						
+						$('.add-comment').on('click', function(){
+							$('.add_comment').slideToggle();
+						})
+					});					
+	
+		</script>
+		
+		<ul class="link-page">
+			<li><a href="#">&laquo;</a></li>
+			<li><a href="#" class="active-link">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">&raquo;</a></li>
+		</ul>
+	</div>
+	
+	
+	<div class="clear"></div>
+</div>
+
+
+<div class="footer">
+	<div class="content">
+		<div class="footer-logo">
+			<ul>
+				<li>Головна
+					<ul>
+						<li><a href="#">Lorem ipsum dolor</a></li>
+						<li><a href="#">Lorem ipsum dolor</a></li>
+					</ul>
+				</li>
+				<li>Категорії страв
+					<ul>
+						<li><a href="#">Lorem ipsum dolor</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+					</ul>
+				</li>
+				<li>Поради
+					<ul>
+						<li><a href="#">Lorem ipsum dolor</a></li>
+					</ul>
+				</li>
+				<li>Форум
+					<ul>
+						<li><a href="#">Lorem ipsum dolor</a></li>
+					</ul>
+				</li>
+			</ul>
+			<p>&copy; 2016 Kitchen by Smachulo T.I.</p>
+		</div>
+		<form action="#" method="post">
+			<fieldset>
+				<p>Contact us now!</p>
+				<input type="text" name="name" value="" placeholder="Імя"/>
+				<input type="text" name="email" value="" placeholder="E-mail"/>
+				<textarea rows="" cols="" name="comment" placeholder="Запитання"></textarea>
+				<input type="submit" value="Відправити"/>
+			</fieldset>
+		</form>
+	</div><div class="clear"></div>
+</div>
+
+</body>
+</html>
+
