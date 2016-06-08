@@ -1,0 +1,22 @@
+.owl-carousel .owl-wrapper:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;}
+.owl-carousel{display:none;position:relative;width:100%;-ms-touch-action:pan-y;}
+#owl-demo{width:100%; height:550px; overflow: hidden;}
+#owl-demo-two{
+	width:80%;
+	height:101px; 
+	overflow: hidden;
+	margin:40px auto 0 auto;
+	padding:40px 10%;
+	position: relative;
+	border-top:2px solid rgba(57,57,57, .3);
+}
+.owl-carousel .owl-wrapper-outer{overflow:hidden;position:relative;width:100%; }
+.owl-carousel .owl-wrapper-outer.autoHeight{-webkit-transition:height 500ms ease-in-out;-moz-transition:height 500ms ease-in-out;-ms-transition:height 500ms ease-in-out;-o-transition:height 500ms ease-in-out;transition:height 500ms ease-in-out}
+.owl-carousel .owl-item{float:left;}
+#owl-demo .owl-item img{width: 100%; height: auto; }
+.owl-controls .owl-buttons div{cursor:pointer}.owl-controls{-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.grabbing{}
+.owl-carousel .owl-wrapper,.owl-carousel .owl-item{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0)}
+#owl-demo-two .owl-prev{width: 25px; height: 25px; background: url(../img/left.png) no-repeat; position: absolute; top: 50%; left: 0; margin-top: -12px; }
+#owl-demo-two .owl-next{width: 25px; height: 25px; background: url(../img/right.png) no-repeat; position: absolute; top: 50%; right: 0; margin-top: -12px;}
+.owl-controls .owl-page{display:inline-block;z-index:1;cursor:pointer}.owl-theme .owl-controls{text-align:left}

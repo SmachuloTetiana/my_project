@@ -1,0 +1,82 @@
+
+#modal{
+	width:330px;
+	margin:0 auto;
+	padding: 50px 0;
+	background: #fff;
+	border-top: 8px solid #a80000;
+	position: relative;
+	text-align: center;
+}
+
+#modal h1{
+	font:40px Adventure;
+	color:#a80000;
+}
+
+#modal input[type="text"]{
+	width:250px;
+	height: 30px;
+	padding-left: 10px;
+	background:#fff;
+	border:1px solid #e4e4e4;
+	border-radius:5px;
+	font:15px Giger;
+	color:#585858;
+	line-height: 30px;
+	margin:10px 0;
+}
+
+#modal textarea{
+	min-width:250px;
+	max-width:250px;
+	min-height:50px;
+	padding:5px 0 5px 10px;
+	background:#fff;
+	border:1px solid #e4e4e4;
+	*border:1px solid #4a628a;
+	border-radius:5px;
+	font:15px Giger;
+	color:#585858;
+	margin-top:10px;
+}
+
+#modal .file_add{
+	width: 260px;
+	margin: 0 auto;
+}
+
+#modal input[type="submit"]{
+	width:260px;
+	padding:8px 0;
+	cursor:pointer;
+	background:#a80000;
+	border-radius:5px;
+	font:18px Giger;
+	color:#fff;
+	border: none;
+	margin-top: 10px;
+}
+
+
+
+.arcticmodal-close {
+	width: 32px;
+	height: 33px;
+	float: right;
+	background: url(../img/close.png) no-repeat;
+	cursor: pointer;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+}
+
+.arcticmodal-close:hover{
+	background: url(../img/close-red.png) no-repeat;	
+}
+
+.arcticmodal-overlay,
+.arcticmodal-container {position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 1000;}
+.arcticmodal-container { overflow: auto; margin: 0; padding: 0; border: 0; border-collapse: collapse; }
+.arcticmodal-container_i {height: 100%; margin: 0 auto;}
+
