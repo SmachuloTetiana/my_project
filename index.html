@@ -1,0 +1,282 @@
+<!DOCTYPE html> 
+<head>
+<meta charset="utf-8" />
+<title>Dishes</title>
+<link href="style.css" type="text/css" rel="stylesheet"/>
+<link href="css/owl.carousel.css" rel="stylesheet" type="text/css" />
+<link href="css/animate.css" rel="stylesheet" type="text/css" />
+<link href="css/jquery.arcticmodal-0.3.css" type="text/css" rel="stylesheet"/>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script type="text/javascript">
+	/*var a = prompt('browser?', '');
+	if(a == 'IE'){
+		alert("О, да у вас IE!")
+	} 
+	else if(a == 'Chrome' || a == "Firefox" || a == "Safari" || a == "Opera"){
+		alert("Да, и эти браузеры мы поддерживаем")		
+	}
+	else {
+		alert("Мы надеемся, что и в вашем браузере все ок!")
+	}
+	
+	var a = prompt('a?', '');
+	switch(a){
+		case '0':
+			alert('0');
+			break;
+			
+		case '1':
+			alert('1');
+			break;
+			
+		case '2':
+		case '3':
+			alert('2,3');
+			break;
+			
+		default:
+			alert('Немає таких значень');
+	}*/
+	$(function(){var wrapper = $( ".file_add" ),inp = wrapper.find( "input" ),btn = wrapper.find( "button" ),lbl = wrapper.find( "div" );
+		btn.focus(function(){wrapper.addClass( "focus" );}).blur(function(){wrapper.removeClass( "focus" );});
+		btn.add( lbl ).click(function(){inp.click();});
+		var file_api = ( window.File && window.FileReader && window.FileList && window.Blob ) ? true : false;
+		inp.change(function(){var file_name;if( file_api && inp[ 0 ].files[ 0 ] )	file_name = inp[ 0 ].files[ 0 ].name;
+		else file_name = inp.val().replace( "", '' );if( ! file_name.length )return;
+		if( lbl.is( ":visible" ) ){lbl.text( file_name );btn.text( "Вибрано" );btn.css("text-decoration","none");}else btn.text( file_name );}).change();
+	});
+	
+</script>
+	
+</head>
+<body>
+<div style="display: none;">
+	<div id="modal">
+		<div class="arcticmodal-close"></div>
+		<h1>Добавити пост</h1>
+		<form action="#" method="post">
+			<fieldset>
+				<input type="text" name="name" value="" placeholder="Назва">
+				<div class="file_add">
+					<button>Add file</button>
+					<div>Не вибрано</div>
+					<input id="inpYT" type="file" name="music" multiple >
+				</div>	
+				<textarea name="info" rows="" cols="" placeholder="Рецепт"></textarea>
+				<input type="submit" class="hvr-shadow" value="Добавити">
+			</fieldset>
+		</form>
+		<div class="clear"></div>
+	</div>	
+</div>
+
+
+<header class="header">
+	<div class="content">
+		<div class="logo">
+			<img src="img/logo.png" alt="logo"/>
+			<a href="#">Dishes</a>	
+		</div>
+		<form action="#" method="post">
+			<fieldset>
+				<input type="text" name="search" maxlength="38" value="" placeholder="Пошук рецепту..."/>
+				<input type="submit" value=""/>
+			</fieldset>
+		</form>
+		
+		<nav>
+			<ul class="nav-main">
+				<li><a href="forum.html">Форум для спілкування</a></li>   
+				<li><a href="advice.html">Поради</a></li>      
+				<li><a href="blog.html">Каталог страв</a></li>   
+				<li class="active"><a href="index.html">Головна</a></li>    
+			</ul>
+		</nav>
+	</div><div class="clear"></div>
+</header>
+
+<div class="video-block">
+	<video loop="loop" muted="muted" preload="auto" class="videoPlay" id="Video1" autoplay="">
+		<source src="video/chokolate_mousse_recipe.mp4" type="video/mp4" /> 
+	</video>
+	
+	<div class="video-title">
+		<div class="center-block">
+			<p>Залиште свій власний рецепт !</p>
+			<hr>
+			<button onclick="javascript:modal();">Добавити пост</button>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+
+<div class="chef-cook">
+	<div class="content">
+		<div class="chef-cook-left">
+			<h1>Art of cakes</h1>
+			<h2>We create delicious memories</h2>
+			<p>Складає заявки на необхідні продовольчі товари, напівфабрикати і сировину, забезпечує їх своєчасне отримання зі складу, контролює терміни, асортимент, кількість і якість їх надходження.</p>
+			<h1 class="chef-h1">Chef cook</h1>
+			<span>Amando</span>
+			<img src="img/chef.png" alt="chef_foto"/>
+			<span>Cabriel</span><div class="clear"></div>
+			<h3><b>&ldquo;</b> <i>Чем лучше ингредиенты, тем труднее с ними работать.</i> <b>&rdquo;</b></h3>
+		</div>
+		
+		<img class="chef-cook-right" src="img/taste.jpg" alt="taste"/><div class="clear"></div>
+	</div>
+</div>
+
+<div class="recipe">
+	<div class="content">
+		<div class="recipe-block">
+			<img class="recipe-icon" src="img/recipe.png" alt=""/>
+			<div class="recipe-info">
+				<h1>Найкраща страва</h1>
+				<h2>Смачило Тетяна</h2>
+				<p>Складає заявки на необхідні продовольчі товари, напівфабрикати і сировину, забезпечує їх своєчасне отримання зі складу, контролює терміни, асортимент, кількість і якість їх надходження.</p>
+				<div class="star">
+					<a href="#"><img src="img/star-good.png" alt=""/></a>
+					<a href="#"><img src="img/star-good.png" alt=""/></a>
+					<a href="#"><img src="img/star-good.png" alt=""/></a>
+					<a href="#"><img src="img/star-good.png" alt=""/></a>
+					<a href="#"><img src="img/star.png" alt=""/></a>
+				</div><div class="clear"></div>
+				<div id="owl-demo-two" class="owl-carousel">
+					<div class="item"><img src="img/slide1.png" alt="slide_one" /></div>
+					<div class="item"><img src="img/slide2.png" alt="slide_two" /></div>
+					<div class="item"><img src="img/slide3.png" alt="slide_three" /></div>
+					
+					<div class="item"><img src="img/slide1.png" alt="slide_one" /></div>
+					<div class="item"><img src="img/slide2.png" alt="slide_two" /></div>
+					<div class="item"><img src="img/slide3.png" alt="slide_three" /></div>
+				</div>
+			</div>
+		</div>
+	</div><div class="clear"></div>
+</div>
+
+<div class="content">
+	<div class="dishes">
+		<div class="dishes-block">
+			<div class="dishes-img"><img src="img/icon2.jpg" alt=""/></div>
+			<div class="dishes-info">
+				<p><a href="#">Dessert recipe</a></p>
+				<div class="star">
+					<a href="#"><img src="img/star-good.png" alt=""/></a>
+					<a href="#"><img src="img/star-good.png" alt=""/></a>
+					<a href="#"><img src="img/star-good.png" alt=""/></a>
+					<a href="#"><img src="img/star.png" alt=""/></a>
+					<a href="#"><img src="img/star.png" alt=""/></a>
+				</div>
+				<div class="dishes-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </div>
+				<b>25 хв</b>
+				<button class="hvr-shadow">Читати далі...</button>				
+			</div>
+		</div>
+		<div class="dishes-block">
+			<div class="dishes-img"><img src="img/icon3.jpg" alt=""/></div>
+			<div class="dishes-info">
+				<p><a href="#">Dessert recipe</a></p>
+				<div class="star">
+					<a href="#"><img src="img/star-good.png" alt=""/></a>
+					<a href="#"><img src="img/star-good.png" alt=""/></a>
+					<a href="#"><img src="img/star-good.png" alt=""/></a>
+					<a href="#"><img src="img/star.png" alt=""/></a>
+					<a href="#"><img src="img/star.png" alt=""/></a>
+				</div>
+				<div class="dishes-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </div>
+				<b>25 хв</b>
+				<button class="hvr-shadow">Читати далі...</button>				
+			</div>
+		</div>
+		<div class="dishes-block b_none">
+			<div class="dishes-img"><img src="img/icon4.jpg" alt=""/></div>
+			<div class="dishes-info">
+				<p><a href="#">Dessert recipe</a></p>
+				<div class="star">
+					<a href="#"><img src="img/star-good.png" alt=""/></a>
+					<a href="#"><img src="img/star-good.png" alt=""/></a>
+					<a href="#"><img src="img/star-good.png" alt=""/></a>
+					<a href="#"><img src="img/star.png" alt=""/></a>
+					<a href="#"><img src="img/star.png" alt=""/></a>
+				</div>
+				<div class="dishes-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </div>
+				<b>25 хв</b>
+				<button class="hvr-shadow">Читати далі...</button>				
+			</div>
+		</div><div class="clear"></div>
+	</div>
+</div>
+
+<div class="footer">
+	<div class="content">
+		<div class="footer-logo">
+			<ul>
+				<li>Головна
+					<ul>
+						<li><a href="#">Lorem ipsum dolor</a></li>
+						<li><a href="#">Lorem ipsum dolor</a></li>
+					</ul>
+				</li>
+				<li>Категорії страв
+					<ul>
+						<li><a href="#">Lorem ipsum dolor</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+					</ul>
+				</li>
+				<li>Поради
+					<ul>
+						<li><a href="#">Lorem ipsum dolor</a></li>
+					</ul>
+				</li>
+				<li>Форум
+					<ul>
+						<li><a href="#">Lorem ipsum dolor</a></li>
+					</ul>
+				</li>
+			</ul>
+			<p>&copy; 2016 Kitchen by Smachulo T.I.</p>
+		</div>
+		<form action="#" method="post">
+			<fieldset>
+				<p>Contact us now!</p>
+				<input type="text" name="name" value="" placeholder="Імя"/>
+				<input type="text" name="email" value="" placeholder="E-mail"/>
+				<textarea rows="" cols="" name="comment" placeholder="Запитання"></textarea>
+				<input type="submit" value="Відправити"/>
+			</fieldset>
+		</form>
+	</div><div class="clear"></div>
+</div>
+
+<script type="text/javascript" src="js/owl.carousel.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		 $("#owl-demo-two").owlCarousel({
+			itemsCustom : [
+				[0, 3],
+				[460, 3],
+				[768, 3],
+				[1024, 3]
+			 ],
+			autoPlay : true,
+			stopOnHover : true,
+			navigation : true,
+			itemsDesktop : [1199,3],
+			itemsDesktopSmall : [979,3],	
+		}); 
+	});	 
+</script>
+<script type="text/javascript" src="js/animation.js"></script>
+<script type="text/javascript" src="js/jquery.arcticmodal-0.3.min.js"></script>
+<script type="text/javascript">
+	function modal() { $('#modal').arcticmodal();}
+</script>
+
+</body>
+</html>
+
