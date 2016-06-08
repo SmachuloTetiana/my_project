@@ -1,4 +1,50 @@
 
+/***********ClickLike-ModalAddComment**************/
+
+$(document).ready(function() {
+	$(".like-input").on("click", function(){
+		var newCount = parseInt($(this).text(), 10) + 1; 
+		$(this).text(newCount); 
+	});
+						
+	$('.add-comment').on('click', function(){
+	$('.add_comment').slideToggle();
+	})
+});	
+
+/***********AddFile**************/
+
+$(function(){var wrapper = $( ".file_add" ),inp = wrapper.find( "input" ),btn = wrapper.find( "button" ),lbl = wrapper.find( "div" );
+	btn.focus(function(){wrapper.addClass( "focus" );}).blur(function(){wrapper.removeClass( "focus" );});
+	btn.add( lbl ).click(function(){inp.click();});
+	var file_api = ( window.File && window.FileReader && window.FileList && window.Blob ) ? true : false;
+	inp.change(function(){var file_name;if( file_api && inp[ 0 ].files[ 0 ] )	file_name = inp[ 0 ].files[ 0 ].name;
+	else file_name = inp.val().replace( "", '' );if( ! file_name.length )return;
+	if( lbl.is( ":visible" ) ){lbl.text( file_name );btn.text( "Вибрано" );btn.css("text-decoration","none");}else btn.text( file_name );}).change();
+});
+
+/***********Carousel**************/
+
+$(document).ready(function() {
+	$("#owl-demo-two").owlCarousel({
+		itemsCustom : [
+			[0, 3],
+			[460, 3],
+			[768, 3],
+			[1024, 3]
+		 ],
+		autoPlay : true,
+		stopOnHover : true,
+		navigation : true,
+		itemsDesktop : [1199,3],
+		itemsDesktopSmall : [979,3],	
+	}); 
+});	
+
+/***********Modal**************/
+
+function modal() { $('#modal').arcticmodal();}
+
 /***********Calendar**************/
 
 	function Calendar2(id, year, month) {
@@ -39,51 +85,6 @@
 	document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(3)').onclick = function() {
 	  Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)+1);
 	}
-
-/***********ClickLick-AddComment**************/
-
-$(document).ready(function() {
-	$(".like-input").on("click", function(){
-		var newCount = parseInt($(this).text(), 10) + 1; 
-		$(this).text(newCount); 
-	});
-						
-	$('.add-comment').on('click', function(){
-	$('.add_comment').slideToggle();
-	})
-});	
-
-/***********AddFile**************/
-
-$(function(){var wrapper = $( ".file_add" ),inp = wrapper.find( "input" ),btn = wrapper.find( "button" ),lbl = wrapper.find( "div" );
-	btn.focus(function(){wrapper.addClass( "focus" );}).blur(function(){wrapper.removeClass( "focus" );});
-	btn.add( lbl ).click(function(){inp.click();});
-	var file_api = ( window.File && window.FileReader && window.FileList && window.Blob ) ? true : false;
-	inp.change(function(){var file_name;if( file_api && inp[ 0 ].files[ 0 ] )	file_name = inp[ 0 ].files[ 0 ].name;
-	else file_name = inp.val().replace( "", '' );if( ! file_name.length )return;
-	if( lbl.is( ":visible" ) ){lbl.text( file_name );btn.text( "Вибрано" );btn.css("text-decoration","none");}else btn.text( file_name );}).change();
-});
-
-$(document).ready(function() {
-	$("#owl-demo-two").owlCarousel({
-		itemsCustom : [
-			[0, 3],
-			[460, 3],
-			[768, 3],
-			[1024, 3]
-		 ],
-		autoPlay : true,
-		stopOnHover : true,
-		navigation : true,
-		itemsDesktop : [1199,3],
-		itemsDesktopSmall : [979,3],	
-	}); 
-});	
-
-function modal() { $('#modal').arcticmodal();}
-
-
-/***********AddFile**************/
 
 
   
