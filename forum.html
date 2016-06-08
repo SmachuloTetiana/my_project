@@ -4,7 +4,6 @@
 <title>Dishes</title>
 <link href="style.css" type="text/css" rel="stylesheet"/>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 
 	
 </head>
@@ -78,20 +77,6 @@
 			</div>
 		</div>
 		
-		<script>
-					$(document).ready(function() {
-						$(".like-input").on("click", function(){
-							var newCount = parseInt($(this).text(), 10) + 1; 
-							$(this).text(newCount); 
-						});
-						
-						$('.add-comment').on('click', function(){
-							$('.add_comment').slideToggle();
-						})
-					});					
-	
-		</script>
-		
 		<ul class="link-page">
 			<li><a href="#">&laquo;</a></li>
 			<li><a href="#" class="active-link">1</a></li>
@@ -148,6 +133,11 @@
 		</form>
 	</div><div class="clear"></div>
 </div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/my.js"></script>
+
+
 
 </body>
 </html>
