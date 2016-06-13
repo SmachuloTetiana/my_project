@@ -122,13 +122,16 @@
 			</ul>
 			<p>&copy; 2016 Kitchen by Smachulo T.I.</p>
 		</div>
-		<form action="#" method="post">
+		<form action="mail/mail.php" method="post" id="call_send">
 			<fieldset>
 				<p>Contact us now!</p>
-				<input type="text" name="name" value="" placeholder="Імя"/>
+				<div id="txt"></div>
+				<div id="hide">
+				<input type="text" name="name" value="" placeholder="Ім'я"/>
 				<input type="text" name="email" value="" placeholder="E-mail"/>
 				<textarea rows="" cols="" name="comment" placeholder="Запитання"></textarea>
 				<input type="submit" value="Відправити"/>
+				</div>
 			</fieldset>
 		</form>
 	</div><div class="clear"></div>
@@ -136,6 +139,7 @@
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/perevirka.js"></script>
 
 
 

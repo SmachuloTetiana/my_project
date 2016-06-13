@@ -388,10 +388,10 @@ margin-bottom:20px;
 .footer form input[type="text"]{
 width:190px;
 background:#f1f0ec;
-padding:6px 0 7px 10px;
-font:13px Arial;
+padding:5px 0 5px 10px;
+font:13px Giger;
 color:#393939;
-border:none;
+border:1px solid #fff;
 margin-bottom:10px;
 }
 
@@ -399,11 +399,16 @@ margin-bottom:10px;
 min-width:190px;
 max-width:190px;
 background:#f1f0ec;
-padding:6px 0 7px 10px;
-font:13px Arial;
+padding:5px 0 5px 10px;
+font:13px Giger;
 color:#393939;
-border:none;
+border:1px solid #fff;
 margin-bottom:10px;
+}
+
+#txt{
+	font:15px Giger;
+	color:#fff;
 }
 
 .footer form input[type="submit"]{
