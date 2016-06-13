@@ -14,16 +14,19 @@
 	<div id="modal">
 		<div class="arcticmodal-close"></div>
 		<h1>Добавити пост</h1>
-		<form action="#" method="post">
+		<form action="mail/mail.php" method="post" id="call_send3">
 			<fieldset>
+				<div id="txt3"></div>
+				<div id="hide3">
 				<input type="text" name="name" value="" placeholder="Назва">
 				<div class="file_add">
 					<button>Add file</button>
 					<div>Не вибрано</div>
-					<input id="inpYT" type="file" name="music" multiple >
+					<input id="inpYT" type="file" name="file" multiple >
 				</div>	
-				<textarea name="info" rows="" cols="" placeholder="Рецепт"></textarea>
+				<textarea name="recipe" rows="" cols="" placeholder="Рецепт"></textarea>
 				<input type="submit" class="hvr-shadow" value="Добавити">
+				</div>
 			</fieldset>
 		</form>
 		<div class="clear"></div>

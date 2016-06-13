@@ -406,10 +406,12 @@ border:1px solid #fff;
 margin-bottom:10px;
 }
 
-#txt{
+#txt, #txt2, #txt3{
 	font:15px Giger;
 	color:#fff;
 }
+
+#txt2, #txt3{ color: #585858; }
 
 .footer form input[type="submit"]{
 padding:6px 15px 8px 15px;

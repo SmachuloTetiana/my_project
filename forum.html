@@ -39,11 +39,14 @@
 	<div class="title">Форум для спілкування <button class="add-comment hvr-shadow">Залишити коментар</button></div>
 	
 	<div class="add_comment">
-		<form action="admin/insert.php?pr=insert_tovar" method="post" enctype='multipart/form-data'>
+		<form action="mail/mail.php" method="post" id="call_send2">
 			<fieldset>
+				<div id="txt2"></div>
+				<div id="hide2">
 				<input type="text" name="name" value="" placeholder="Ваше ім'я"/>
-				<textarea name="info" rows="" cols="" placeholder="Ваш коментар"></textarea>
+				<textarea name="comment" rows="" cols="" placeholder="Ваш коментар"></textarea>
 				<input type="submit" class="hvr-shadow" value="Додати коментар"/>
+				</div>
 			</fieldset>
 		</form><div class="clear"></div>
 	</div>
@@ -138,8 +141,8 @@
 </div>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/perevirka.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 
 
 
